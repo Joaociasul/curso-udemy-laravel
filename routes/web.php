@@ -17,9 +17,10 @@ use Illuminate\Support\Facades\Route;
 //     return "Rota principal";
 // });
 Route::get('/','PrincipalController@index')->name("site.index");
-Route::get('/sobre-nos','SobreNosController@index')->name("site.sobre");
+Route::get('/sobre-nos','SobreNosController@index')->name("site.sobrenos");
 Route::get('/contato', "ContatoController@index")->name("site.contato");
 Route::get('/login', "LoginController@index")->name("site.login");
+Route::get('/index',"HtmlController@index")->name('site.index');
 Route::get('/teste/{p1}/{p2}', "TesteController@index")->name('teste');
 
 Route::prefix('/app')->group(function(){
